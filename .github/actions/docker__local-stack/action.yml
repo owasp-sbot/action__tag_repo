@@ -36,11 +36,11 @@ runs:
     - name: Wait for LocalStack to be ready
       shell: bash
       run: |
-        for i in {1..10}; do
+        for i in {1..20}; do
           if curl -s http://localhost:4566/_localstack/health; then
             echo "LocalStack is ready"
             break
           fi
           echo "Waiting for LocalStack..."
-          sleep 5
+          sleep 1
         done
